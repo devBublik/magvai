@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test work</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="first-screen">
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="burger">
+                        <div class="burger__item"></div>
+                        <div class="burger__item"></div>
+                        <div class="burger__item"></div>
+                    </div>
+                    <a class="header__link" href="/">
+                        <img class="header__logo" src="/images/svg/logo.svg" alt="Логотип компании Магвай">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" data-text="УСЛУГИ">УСЛУГИ</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">Абонементы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">Почему мы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">Оборудование</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">Акции</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">FAQ</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__contacts">
+                        <a class="phone-link" href="/"></a>
+                        <button class="form-link request">
+                            <span class="form-link__title">Оставить заявку</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="banner">
+            <div class="container">
+                <div class="banner__wr">
+                    <div class="banner__info">
+                        <h1 class="main-title banner__title">Полет Илона Маска и&nbsp;Dodge coin</h1>
+                        <p class="banner__desc">В&nbsp;прошлый четверг все офигели от&nbsp;полета DOGIE COIN на&nbsp;марс.</p>
+                        <button type="button" class="form-link request">
+                            <span class="form-link__title">Оставить заявку</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </section>
+    <section class="cards">
+        <div class="container">
+            <h2 class="cards__title">
+                Карточки
+            </h2>
+            <div class="cards__wr"></div>
+            <button class="form-link cards__btn">
+                <span class="form-link__title">Загрузить еще</span>
+            </button>
+        </div>
+    </section>
+    <div class="modal">
+        <div class="modal__content">
+            <form id="form" class="form">
+                <div class="custom-input">
+                    <label for="name" class="custom-input__label">Введите имя</label> 
+                    <input type="text" name="name" id="name">
+                    <span class="custom-input__error"></span>
+                </div>
+                <div class="custom-input">
+                    <label for="name" class="custom-input__label">Введите номер телефона</label> 
+                    <input type="text" name="phone" id="phone">
+                    <span class="custom-input__error"></span>
+                </div>
+                <button type="submit" class="modal__btn">Отправить</button>
+            </form>
+            <button class="modal__close">
+                <img src="/images/svg/close-icon.svg" alt="иконка закрытия модального окна"/>
+            </button>
+            <div class="modal__thanks"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@import '../vars.scss';
+@import '../media.scss';
+
+.header {
+    width: 100%;
+    padding: 28px 0;
+    color: $white-color;
+
+    @include mobile {
+        padding: 20px 0;
+    }
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 76px;
+        @include mobile {
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        gap: 28px;
+        margin: 0 0 0 auto;
+        padding: 0 20px 0 0;
+
+        @include mobile {
+           display: none;
+        }
+        &.mobile {
+            width: 95%;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            z-index: 10;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            gap: 6px;
+
+            .phone-link::after {
+                left: 45%;
+            }
+
+            .form-link {
+                max-width: 100%;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__link {
+        @include mobile {
+            margin-left: auto;
+        }
+    }
+
+    &__logo {
+        @include mobile {
+            max-width: 112px;
+        }
+    }
+}
+    

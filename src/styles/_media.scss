@@ -1,0 +1,117 @@
+@import './vars.scss';
+
+@mixin max-width($width){
+  @media only screen and (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media only screen and (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin min-max-width($minWidth, $maxWidth) {
+  @media only screen and (min-width: #{$minWidth}px) and (max-width: #{$maxWidth}px) {
+    @content;
+  }
+}
+
+@mixin max-height($height) {
+  @media only screen and (max-height: #{$height}px) {
+    @content;
+  }
+}
+
+@mixin min-height($height) {
+  @media only screen and (min-height: #{$height}px) {
+    @content;
+  }
+}
+
+// Media queries
+
+// desktop-xxl <= 1600px
+@mixin desktop-xxl() {
+  @include max-width($desktop-xl) {
+    @content;
+  }
+}
+
+// desktop-lg >= 1400px
+@mixin desktop-lg() {
+  @include min-width(1400) {
+    @content;
+  }
+}
+
+// 1199px <= desktop-md <= 1399px
+@mixin desktop-md() {
+  @include min-max-width($tablet-lg, $desktop-lg) {
+    @content;
+  }
+}
+
+// tablet-lg <= 1199px
+@mixin tablet-lg() {
+  @include max-width($tablet-lg) {
+    @content;
+  }
+}
+
+// 1024px <= desktop-sm <= 1199px
+@mixin desktop-sm() {
+  @include min-max-width(1024, $tablet-lg) {
+    @content;
+  }
+}
+
+// desktop >= 1024px
+@mixin desktop() {
+  @include min-width(1024) {
+    @content;
+  }
+}
+
+// tablet-mobile <= 1023px
+@mixin tablet-mobile() {
+  @include max-width($tablet) {
+    @content;
+  }
+}
+
+// 768px <= tablet <= 1023px
+@mixin tablet() {
+  @include min-max-width(768, $tablet) {
+    @content;
+  }
+}
+
+// desktop-tablet >= 768px
+@mixin desktop-tablet() {
+  @include min-width(768) {
+    @content;
+  }
+}
+
+// mobile <= 767px
+@mixin mobile() {
+  @include max-width($mobile) {
+    @content;
+  }
+}
+
+// 576px <= mobile-lg <= 767px
+@mixin mobile-lg() {
+  @include min-max-width($mobile-sm, $mobile) {
+    @content;
+  }
+}
+
+// mobile-sm <= 575px
+@mixin mobile-sm() {
+  @include max-width($mobile-sm) {
+    @content;
+  }
+}

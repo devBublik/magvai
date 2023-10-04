@@ -1,0 +1,19 @@
+@import '../vars.scss';
+@import '../media.scss';
+
+.custom-input {
+   
+    margin: 0 0 16px 0;
+    
+    input {
+        width: 100%;
+        border: 1px solid $black-color;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    &__label {
+        display: block;
+        margin: 0 0 8px 0;
+    }
+}

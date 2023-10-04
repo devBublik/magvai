@@ -1,0 +1,31 @@
+@import '../vars.scss';
+@import '../media.scss';
+
+.phone-link {
+    min-width: 74px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform: skewX(-18deg);
+    border: 1px solid $white-color;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: 20px;
+        width: 32px;
+        height: 32px;
+        background-image: url('/images/svg/phone.svg');
+        background-repeat: no-repeat;
+        transform: skewX(18deg);
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+  }
